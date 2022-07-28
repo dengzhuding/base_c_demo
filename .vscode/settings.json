@@ -5,6 +5,7 @@
     "*.vue": "vue",
     "*.code-snippets": "yaml",
     "stdio.h": "c",
-    "hello.h": "c"
+    "hello.h": "c",
+    "math.h": "c"
   }
 }

@@ -1,0 +1,17 @@
+// 动态库生成以及使用 
+1. 生成目标文件
+gcc -fPIC add.c -c
+2. 生成动态库(linux .so后缀，windows .dll后缀)
+gcc -shared add.o -o libadd.so
+或者直接油源文件生成
+gcc -shared -fPIC add.c -o libadd.so
+3. 链接
+-I（大写的字母i）指明头文件的包含路径
+-L 指明静态库的包含路径
+-l（小写字母L）指明静态库，lib[NAME].{a, dll}
+gcc adduse.c -ladd -L ./ -o adduse
+4. 执行
+./adduse
+
+5.使用ldd命令查看，运行时所需要链接的so库（windows没有这个命令）
+ldd ./adduse

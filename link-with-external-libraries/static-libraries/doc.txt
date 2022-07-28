@@ -1,12 +1,12 @@
 // 静态库生成以及使用 
 1. 生成目标文件
 gcc -c add.c
-2. 打包成静态库
+2. 打包成静态库(linux .a后缀，windows .dll后缀)
 ar rcs libadd.a add.o
 3. 链接
 -I（大写的字母i）指明头文件的包含路径
 -L 指明静态库的包含路径
--l（小写字母L）指明静态库
+-l（小写字母L）指明静态库，lib[NAME].{a, dll}
 gcc adduse.c -ladd -L ./ -o adduse
 4. 执行
 ./adduse
