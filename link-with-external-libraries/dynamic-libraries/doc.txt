@@ -13,5 +13,7 @@ gcc adduse.c -ladd -L ./ -o adduse
 4. 执行
 ./adduse
 
+windows下可直接执行，ubuntu报错：libadd.so: cannot open shared object file: No such file or directory
+执行(临时)：export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
 5.使用ldd命令查看，运行时所需要链接的so库（windows没有这个命令）
 ldd ./adduse
