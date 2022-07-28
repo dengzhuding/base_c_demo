@@ -4,6 +4,7 @@
     "*.js": "javascript",
     "*.vue": "vue",
     "*.code-snippets": "yaml",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "hello.h": "c"
   }
 }

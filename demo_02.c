@@ -50,4 +50,5 @@ int main(void) {
     %%-表示%本身
    */
   printf("number = %d, money = %f, money_double = %lf", number, money, money_double);
+  getchar();
 }
