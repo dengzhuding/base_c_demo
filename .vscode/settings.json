@@ -6,6 +6,24 @@
     "*.code-snippets": "yaml",
     "stdio.h": "c",
     "hello.h": "c",
-    "math.h": "c"
+    "math.h": "c",
+    "vector": "cpp",
+    "*.tcc": "cpp",
+    "cmath": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "exception": "cpp",
+    "initializer_list": "cpp",
+    "limits": "cpp",
+    "new": "cpp",
+    "cstdint": "cpp",
+    "type_traits": "cpp",
+    "typeinfo": "cpp",
+    "utility": "cpp",
+    "array": "cpp",
+    "map": "cpp",
+    "tuple": "cpp"
   }
 }
