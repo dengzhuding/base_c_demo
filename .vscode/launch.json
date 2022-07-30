@@ -8,14 +8,15 @@
       "name": "(gdb) 启动",
       "type": "cppdbg",
       "request": "launch",
-      "program": "输入程序名称，例如 ${workspaceFolder}/a.exe",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${fileDirname}",
+      "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "/path/to/gdb",
+      "miDebuggerPath": "gdb.exe",
+      "preLaunchTask": "C/C++: gcc.exe compile",
       "setupCommands": [
           {
               "description": "为 gdb 启用整齐打印",
