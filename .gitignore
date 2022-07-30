@@ -1,6 +1,7 @@
 *.exe
 *.o
 *.log
+*.out
 
 # 静态库
 *.dll
