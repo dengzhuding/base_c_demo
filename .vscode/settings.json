@@ -25,5 +25,6 @@
     "array": "cpp",
     "map": "cpp",
     "tuple": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
 }
