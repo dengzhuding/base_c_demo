@@ -10,3 +10,10 @@ ar rcs libadd.a add.o
 gcc adduse.c -ladd -L ./ -o adduse
 4. 执行
 ./adduse
+
+
+使用cmake(-S <path-to-source>, -B <path-to-build>)
+           linux                      windows 环境下
+配置项目    cmake -S . -B build       cmake -G "MinGW Makefiles" -S . -B build
+构建项目    cmake --build build       mingw32-make.exe -C build all
+然后在build目录下就有可执行文件了
