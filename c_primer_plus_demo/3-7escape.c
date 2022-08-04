@@ -8,6 +8,7 @@
  * 
  */
 #include<stdio.h>
+#include<unistd.h>
 
 int main(void) {
   float f_salary;
@@ -25,7 +26,7 @@ int main(void) {
   printf("\rGee!\n"); // \t - 回车符(回到行首)  \n - 换行符
 
   printf("hello");
-  sleep(3); // 这里windows平台在等待时也把hello输出了(刷新了缓冲区，理论上是等到输出下面换行符一起输出hello world.)
+  sleep(3); // 这里windows平台（ubuntu正常）在等待时也把hello输出了(刷新了缓冲区，理论上是等到输出下面换行符一起输出hello world.)
   printf(" world.\n");
 
   printf("hello");
