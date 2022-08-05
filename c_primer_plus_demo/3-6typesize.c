@@ -26,6 +26,7 @@ int main(void) {
   printf("Type double has a size of %zd bytes.\n", sizeof(double));
   printf("Type long double has a size of %zd bytes.\n",
         sizeof(long double)); // 只要不在引号内部或一个单词中间断行，就可以分多行写语句
-  
+
+  printf("Type _Bool has a size of %zd bytes.\n", sizeof(_Bool));
   return 0;
 }

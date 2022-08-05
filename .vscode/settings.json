@@ -24,7 +24,9 @@
     "utility": "cpp",
     "array": "cpp",
     "map": "cpp",
-    "tuple": "cpp"
+    "tuple": "cpp",
+    "limits.h": "c",
+    "float.h": "c"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
