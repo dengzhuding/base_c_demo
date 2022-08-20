@@ -34,7 +34,7 @@
                     printf("%*d", width, number);
                     printf("%*.*f", width, precision, number)
           scanf() - 把*放在%和转换字符之间时，会使得scanf()跳过相应的输出项
-                    scanf("%*d %*d %d", &number);
+                    scanf("%*d %*d %d", &number); //输入: 1 2 3 (把第三个数拷贝给number)
 
 .数字     表示精度
             对于%e和%f转换,表示小数点右边数字的位数
