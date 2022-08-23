@@ -12,7 +12,7 @@ int main(void) {
   char fname[50]; // 文件名
   printf("Enter the name of the file: ");
   scanf("%s", fname);
-  fp = fopen(fname, "r"); // 打开文件
+  fp = fopen(fname, "r"); // 打开文件,ubuntu成功打开，windows失败
   if (fp == NULL) {
     printf("Failed to open file [%s]", fname);
     exit(1);
