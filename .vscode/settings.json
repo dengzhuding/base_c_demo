@@ -26,7 +26,8 @@
     "map": "cpp",
     "tuple": "cpp",
     "limits.h": "c",
-    "float.h": "c"
+    "float.h": "c",
+    "stdbool.h": "c"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
