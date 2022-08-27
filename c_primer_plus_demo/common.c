@@ -23,25 +23,12 @@ char * s_gets(char * st, int n) {
     return ret_val;
   int i = 0;
   while (ret_val[i] != '\n' && ret_val[i] != '\0')
-    // i定位到'\n' 或末尾空字符'\0'
-    i++;
+    i++; // // i定位到'\n' 或末尾空字符'\0'
   if (ret_val[i] == '\n') {
-    // 至少少一个存储空间： abc\0\0
-    ret_val[i] = '\0';
-    return ret_val;
-  }
-  else {
-    /**
-     * 读到末尾都没有换行符，有2种可能：
-     *   1. 换行符刚好在空字符处被截断 - 输入的字符完全存储了
-     *   2. 在换行符前面就被截断了 - 存储不完整
-     * 者两种情况无法区分,只能都算存储不完整，然后就全部舍弃了
-     */
+    ret_val[i] = '\0'; // 至少少一个存储空间： abc\0\0
+  } else {
     while (getchar() != '\n') // 消耗输入行剩余部分
       continue;
-    // 重制存储单元为空字符
-    ret_val[0] = '\0';
-    // NULL指针的值为: 0000000000000000
-    return NULL;
   }
+  return ret_val;
 }
