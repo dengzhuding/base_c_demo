@@ -18,6 +18,9 @@
  *   经过编译时替换(compile-time substitution)
  *   在运行程序时，程序中所有的替换已经完成，这样的常量也称为明示常量(manifest costant)
  * 3. const 限定符(C99新增): const int KEY = value; (不可修改)
+ *    const float * const pfc;
+ *      const 放在*左侧任意位置，限定了指针指向的数据不能改变；
+ *      const 放在*的右侧，限定了指针本身不能改变
  */
 #include<stdio.h>
 #include<string.h> // 提供strlen()原型
