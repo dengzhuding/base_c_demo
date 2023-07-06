@@ -10,7 +10,7 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
-				" common.c",
+				// " common.c",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
