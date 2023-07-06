@@ -51,6 +51,14 @@ L         和浮点转换说明一起只用，表示long double类型的值, %Lf
 t         和整型转换说明一起使用，表示ptrdiff_t类型的值, ptrdiff_t是指2个指针差值的类型(C99)
 z         和整型转换说明一起使用，表示size_t类型的值, size_t是sizeof返回的类型(C99)，%zd
 
+eg.
+%1s或者%2s,%3s:取字符串的前1,2或者3位
+%*c:屏蔽一个字符
+%[A-Z]:取一个A到Z的值
+%[^a-z]:不取a到z的值
+%[^\n]：取非换行之前的值
+printf("%5d", a):左边补
+
  */
 #include<stdio.h>
 // #define PAGES 959 // 明示常量
