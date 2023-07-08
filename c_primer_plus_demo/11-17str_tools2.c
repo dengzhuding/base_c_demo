@@ -80,7 +80,7 @@ int main(void) {
    * 5.
    * char *strchr(const char *_Str, int _Val) - 返回查找的字符的地址
    *   - 如果_Str字符串包含_Val字符，返回首次指向的字符的指针(包含空字符)
-   *   - 如果没找到，返回空字符
+   *   - 如果没找到，返回空指针
    * char *strrchr(const char *_Str, int _Ch)
    *   - 返回字符最后出现的位置(跟上面函数相反的查找方向)
    */
