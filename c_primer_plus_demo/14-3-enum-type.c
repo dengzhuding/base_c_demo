@@ -35,6 +35,7 @@ enum feline {
 
 int main (void) {
   enum spectrum color;
+  sizeof color;
   color = yellow;
   printf("color is: %d\n", color); // 2
   for (color = red; color <= violet; color ++) {

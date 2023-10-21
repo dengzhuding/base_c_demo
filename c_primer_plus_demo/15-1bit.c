@@ -86,6 +86,7 @@ void show_Endian(void);
  * @return char* 返回指向char类型的指针，即str
  */
 char * itobs(int num , char *str);
+char * ftobs(float num , char *str);
 /*4位一组显示二进制字符串 */
 void show_bstr(const char * str);
 /**
@@ -123,6 +124,16 @@ int main(void) {
   // 切换一个值中的后8位
   itobs(invert_end(0x1f1f, 8), bin_str);
   show_bstr(bin_str); // 0001 1111 1110 0000
+  // float test
+  printf("test float number\n");
+  ftobs(0.1, bin_str);
+  show_bstr(bin_str); //
+  ftobs(0.2, bin_str);
+  show_bstr(bin_str);
+  ftobs(0.3, bin_str);
+  show_bstr(bin_str);
+  ftobs(0.1 + 0.2, bin_str);
+  show_bstr(bin_str);
 
   return 0;
 }
@@ -149,6 +160,19 @@ void show_Endian(void) {
 char * itobs(int num , char *str) {
   const static int size = CHAR_BIT * sizeof(int);
   int temp = num;
+  char ch;
+  for (int n = size - 1; n >= 0; n--, temp >>= 1) {
+    ch = (01 & temp) == 1 ? '1' : '0';
+    str[n] = ch;
+  }
+  str[size] = '\n';
+  return str;
+}
+
+char * ftobs(float num , char *str) {
+  const static int size = CHAR_BIT * sizeof(float);
+  int *c_pt = (int *)&num;
+  int temp = *c_pt;
   char ch;
   for (int n = size - 1; n >= 0; n--, temp >>= 1) {
     ch = (01 & temp) == 1 ? '1' : '0';

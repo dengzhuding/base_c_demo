@@ -82,5 +82,13 @@ int main(void) {
   
   puts(s_input);
 
+  /**
+   * void *memcpy(void * restrict s1, const void * restrict s2, size_t n);
+   * void *memmove(void *s1, const void *s2, size_t n);
+   * 这两个函数都从s2 指向的位置拷贝n 字节到s1 指向的位置，而且都返回s1 的值。
+   * 所不同的是，memcpy() 的参数带关键字restrict ，即memcpy() 假设两个内存区域之间没有重叠；
+   * 而memmove() 不作这样的假设，所以拷贝过程类似于先把所有字节拷贝到一个临时缓冲区，然后再拷贝到最终目的地。
+   */
+
   return 0;
 }

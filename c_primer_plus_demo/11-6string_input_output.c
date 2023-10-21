@@ -54,6 +54,9 @@ int main(void) {
    *   - 只能从文件识别EOF,键盘输入EOF(^D)不行
    * fputs(str, file) - 打印字符串-与printf("%s", str)一致，第二个参数指明它要写入的文件(屏幕输入同stdout)
    *   不会再输出的末尾添加换行符
+   * 
+   * 空指针（或NULL ）有一个值，该值不会与任何数据的有效地址对应。
+   * 通常，函数使用它返回一个有效地址表示某些特殊情况发生，例如遇到文件结尾或未能按预期执行。
    */
   printf("use fgets() set words: ");
   fgets(words, STLEN, stdin); // 输入
